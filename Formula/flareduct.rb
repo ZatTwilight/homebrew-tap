@@ -5,20 +5,20 @@
 class Flareduct < Formula
   desc "CLI wrapper around cloudflared for Cloudflare Tunnel workflows"
   homepage "https://github.com/ZatTwilight/flareduct"
-  version "0.1.1"
+  version "0.1.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ZatTwilight/flareduct/releases/download/v0.1.1/flareduct_0.1.1_Darwin_x86_64.tar.gz"
-      sha256 "7fcd8b2f1150473a27ff2811aac0c0c59181f62bb77cbfa28acec4002caff894"
+      url "https://github.com/ZatTwilight/flareduct/releases/download/v0.1.2/flareduct_0.1.2_Darwin_x86_64.tar.gz"
+      sha256 "884520ba054358232c35ec33f3e3cc5712f47c592e1c2703d847a535f04d7eb8"
 
       define_method(:install) do
         bin.install "flareduct"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ZatTwilight/flareduct/releases/download/v0.1.1/flareduct_0.1.1_Darwin_arm64.tar.gz"
-      sha256 "180c905744d164b3570cc2408445562e78c95ce7e710b8f7a9159757ced709ca"
+      url "https://github.com/ZatTwilight/flareduct/releases/download/v0.1.2/flareduct_0.1.2_Darwin_arm64.tar.gz"
+      sha256 "bb375caee83370bca3a1bcc702c5811f9f2c8f37205170117e2e8ca0efccef13"
 
       define_method(:install) do
         bin.install "flareduct"
@@ -28,15 +28,15 @@ class Flareduct < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ZatTwilight/flareduct/releases/download/v0.1.1/flareduct_0.1.1_Linux_x86_64.tar.gz"
-      sha256 "4e6d09b9371ff5d11fc9c28cbfd8d42f6f6cb8c5ffcd87f28307774ed2f14f2b"
+      url "https://github.com/ZatTwilight/flareduct/releases/download/v0.1.2/flareduct_0.1.2_Linux_x86_64.tar.gz"
+      sha256 "757544b222bf0aa20e16e1435a9bffc1a21943f8e59b9776ee91164755f42448"
       define_method(:install) do
         bin.install "flareduct"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ZatTwilight/flareduct/releases/download/v0.1.1/flareduct_0.1.1_Linux_arm64.tar.gz"
-      sha256 "11ffd44dd0dba38ce3aa08427da296b9831f6d1c1bab39bd9d4523cdc31d342e"
+      url "https://github.com/ZatTwilight/flareduct/releases/download/v0.1.2/flareduct_0.1.2_Linux_arm64.tar.gz"
+      sha256 "739297575f682e1f21d8d17f062496d46da75cc3979ab58de5d2da4109738b74"
       define_method(:install) do
         bin.install "flareduct"
       end
